@@ -1,5 +1,18 @@
 console.log("YouTube Speed Controller extension loaded");
 
+function autoSkipAds() {
+  const observer = new MutationObserver(() => {
+    const skipButton = document.querySelector('.ytp-ad-skip-button');
+    if (skipButton) {
+      console.log('Skip Ad button found — clicking');
+      skipButton.click();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+
 function injectSpeedControls() {
   const video = document.querySelector('video');
   const container = document.querySelector('.html5-video-player');
@@ -52,7 +65,6 @@ function injectSpeedControls() {
   };
 
   function updateSpeed() {
-    // Only update if not in ad
     if (!player.classList.contains('ad-showing')) {
       video.playbackRate = speed;
       speedDisplay.textContent = speed.toFixed(2);
@@ -64,8 +76,9 @@ function injectSpeedControls() {
   controlBar.appendChild(increaseBtn);
   container.appendChild(controlBar);
 
-  updateSpeed(); // Initial set
+  updateSpeed(); 
   monitorAds(video, speedDisplay);
+  autoSkipAds();
 }
 
 function monitorAds(video, speedDisplay) {
@@ -88,12 +101,10 @@ function monitorAds(video, speedDisplay) {
   observer.observe(player, { attributes: true, attributeFilter: ['class'] });
 }
 
-// Observe the DOM for changes since YouTube is a SPA
 const observer = new MutationObserver(() => {
   injectSpeedControls();
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
 
-// Try injecting once immediately
 injectSpeedControls();
