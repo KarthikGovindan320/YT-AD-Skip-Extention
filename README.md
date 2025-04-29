@@ -9,6 +9,8 @@ In response to this growing need for a functional and undetectable workaround, I
 
 ## Key Concept
 This is **not an ad blocker** in the traditional sense — and that’s what makes it work.
+Put both of the code files under a folder named "AdBlocker". Upload that folder as your extentention folder into your browser.
+For reference : https://chatgpt.com/share/681088de-4c4c-8012-9551-14ff8a5333a7
 
 ### How It Works:
 - Detects when an ad is playing.
