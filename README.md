@@ -29,12 +29,14 @@ This extension also acts as a **playback speed extender**:
 - Customizable maximum playback speed.
 
 ## Requirements
-- Compatible Chromium-based browser (e.g., Chrome, Edge, Brave).
+- Compatible Chromium-based browser (e.g., Chrome, Edge, Brave). Opera works too.
 - Extension must be loaded in developer mode (or packed and installed manually).
+
+Since there is little hope in this getting aproved into google chrome's extention list, for the time being, one has to manually upload the extention package as a developer.
 
 > ⚠️ **Note**:  
 This tool is intended for **educational and personal use** only.  
-Please use responsibly and comply with YouTube’s terms of service.
+Please use responsibly and comply with YouTube’s terms of service. 😉
 
 ## Feedback
 I’m open to feedback and suggestions to improve this tool further.  
