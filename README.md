@@ -14,7 +14,7 @@ In response to this growing need for a functional and undetectable workaround, I
 
 ### How It Works:
 - Detects when an ad is playing.
-- Sets the **playback speed to 100x**, causing the ad to finish "naturally" in under a second.
+- Sets the **playback speed to 100x** (actually 16x which is the maximum, but basically instant either way), causing the ad to finish "naturally" in under a second.
 - Resumes normal playback immediately after the ad.
 
 Because the extension doesn’t block ads but speeds them up instead, it avoids triggering YouTube's anti-ad-blocker measures.
